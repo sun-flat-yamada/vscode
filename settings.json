@@ -1,0 +1,21 @@
+{
+  "editor.tabSize"                              : 2
+, "editor.fontFamily"                           : "Ricty Diminished, Consolas, 'Courier New', monospace"
+, "[markdown]"                                  :
+  {
+    "files.eol"                                 : "auto"
+  , "editor.tabSize"                            : 2
+  }
+  // https://github.com/DavidAnson/markdownlint/blob/master/doc/Rules.md  
+, "markdownlint.config"                         :
+  {
+    "no-multiple-blanks"                        : { "maximum" : 2 }
+  }
+, "workbench.colorTheme"                        : "Visual Studio 2019 Dark"
+, "editor.suggestSelection"                     : "first"
+, "vsintellicode.modify.editor.suggestSelection": "automaticallyOverrodeDefaultValue"
+, "testMate.cpp.log.logSentry"                  : "disable_3"
+, "team.showWelcomeMessage"                     : false
+, "emmet.showSuggestionsAsSnippets"             : true
+, "git.autofetch"                               : true
+}
