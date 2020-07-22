@@ -2,10 +2,14 @@
 
 ## Settings
 
-| type              | method                            |
-|:------------------|:----------------------------------|
-| VSCode            | Use extension: Code Settings Sync |
-| VSCode Insider    | Use "Preferences Sync"            |
+@2020-07-22
+
+| type              | method                                            |
+|:------------------|:--------------------------------------------------|
+| VSCode            | Use extension: Code Settings Sync                 |
+| VSCode Insider    | Use [Preferences Sync][ref-vscode-settings-sync]  |
+
+[ref-vscode-settings-sync]:https://code.visualstudio.com/docs/editor/settings-sync
 
 
 ## Extensions
