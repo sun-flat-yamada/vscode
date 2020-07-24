@@ -1,21 +1,167 @@
 {
-  "editor.tabSize"                              : 2
-, "editor.fontFamily"                           : "Ricty Diminished, Consolas, 'Courier New', monospace"
-, "[markdown]"                                  :
+  "window.openFoldersInNewWindow"   : "on"
+, "window.closeWhenEmpty"           : false
+//, "window.zoomLevel"                : 0
+, "window.title"                    : "${dirty}${activeEditorShort} / ${rootName}"
+
+, "glassit.alpha"                   : 255
+, "glassit.step"                    : 1
+
+/* Editor settings */
+, "editor.lineNumbers"              : "on"
+, "editor.tabSize"                  : 2
+, "editor.insertSpaces"             : true
+, "editor.renderIndentGuides"       : true
+, "editor.renderWhitespace"         : "all"
+, "editor.fontFamily"               : "'Ricty Diminished', 'Source Han Code JP', 'Droid Sans Mono', 'monospace', monospace, 'Droid Sans Fallback'"
+, "editor.fontSize"                 : 14
+, "editor.letterSpacing"            : -0.5
+, "editor.rulers"                   : [ 80 ]
+, "editor.renderControlCharacters"  : true
+, "editor.matchBrackets"            : true
+, "editor.links"                    : true
+, "editor.cursorStyle"              : "line"
+, "editor.cursorBlinking"           : "smooth"
+, "editor.cursorWidth"              : 3
+, "editor.minimap.showSlider"       : "always"
+, "editor.formatOnSave"             : false
+
+/* Terminal settings */
+, "terminal.integrated.cursorBlinking"      : true
+, "terminal.integrated.fontFamily"          : "Ricty Diminished"
+, "terminal.integrated.fontSize"            : 12
+, "terminal.integrated.setLocaleVariables"  : true
+
+/* Disabled telemetry (to Microsoft) */
+, "telemetry.enableTelemetry"             : false
+, "telemetry.enableCrashReporter"         : false
+
+/* Workbench settings */
+, "workbench.iconTheme"                   : "vscode-icons"
+, "workbench.editor.showTabs"             : true
+, "workbench.statusBar.visible"           : true
+, "workbench.colorCustomizations"         :
   {
-    "files.eol"                                 : "auto"
-  , "editor.tabSize"                            : 2
+    "editor.lineHighlightBackground"      : "#135564"
+//  , "editor.lineHighlightBorder"          : "#20c0a8"
+  , "editor.wordHighlightBackground"      : "#135564"
+  , "editor.selectionBackground"          : "#135564"
+  , "editor.selectionHighlightBackground" : "#135564"
+  , "editor.selectionHighlightBorder"     : "#20c0a8"
+  , "editor.findMatchBackground"          : "#fa6800"
+  , "editor.findMatchHighlightBackground" : "#a0522d"
   }
-  // https://github.com/DavidAnson/markdownlint/blob/master/doc/Rules.md  
-, "markdownlint.config"                         :
+
+/* File settings */
+, "files.autoGuessEncoding"         : true
+, "files.encoding"                  : "utf8"
+, "files.insertFinalNewline"        : true
+, "files.trimFinalNewlines"         : true
+, "files.trimTrailingWhitespace"    : true
+, "[markdown]"                      :
   {
-    "no-multiple-blanks"                        : { "maximum" : 2 }
+    "files.trimTrailingWhitespace"  : false
   }
-, "workbench.colorTheme"                        : "Visual Studio 2019 Dark"
-, "editor.suggestSelection"                     : "first"
-, "vsintellicode.modify.editor.suggestSelection": "automaticallyOverrodeDefaultValue"
-, "testMate.cpp.log.logSentry"                  : "disable_3"
-, "team.showWelcomeMessage"                     : false
-, "emmet.showSuggestionsAsSnippets"             : true
-, "git.autofetch"                               : true
+, "files.exclude"                         :
+  {
+    "**/.git"       : true
+  , "**/.svn"       : true
+  , "**/.hg"        : true
+  , "**/CVS"        : true
+  , "**/.DS_Store"  : true
+  , "**/bin"        : true
+  , "**/*.exe"      : true
+  , "**/*.o"        : true
+  , "**/*.a"        : true
+  , "**/*.so"       : true
+  , "**/*.obj"      : true
+  , "**/*.ilk"      : true
+  , "**/*.pdb"      : true
+  , "**/*.tlog"     : true
+  , "**/*.idb"      : true
+  , "**/*.dll"      : true
+  , "**/.vs"        : true
+  }
+/*
+ * Force associations
+ *
+ * https://code.visualstudio.com/docs/languages/identifiers#_known-language-identifiers
+ */
+, "files.associations"  :
+  {
+/* .clang-format */
+    ".clang-format" : "json"
+/* Assosiate no-suffix std library header */
+  , "iostream"      : "cpp"
+  , "cstdlib"       : "cpp"
+/* Indivisuals */
+  , "makerule.arm"    : "makefile"
+  , "makerule.sim"    : "makefile"
+  , "makerule.common" : "makefile"
+  }
+, "[cpp]"                       :
+  {
+    "editor.insertSpaces"       : true
+  , "editor.detectIndentation"  : true
+  }
+/* C++ settings */
+, "C_Cpp.intelliSenseEngine"          : "Default"
+
+/* clang-format settings */
+, "C_Cpp.clang_format_path"                   : null
+, "C_Cpp.clang_format_style"                  : "file"
+, "C_Cpp.clang_format_fallbackStyle"          :
+  {
+    "BasedOnStyle"                            : "Chromium"
+  , "IndentWidth"                             : 2
+  , "IndentCaseLabels"                        : false
+  , "AlignAfterOpenBracket"                   : "BAS_Align"
+  , "AlignConsecutiveAssignments"             : true
+  , "AlignConsecutiveDeclarations"            : true
+  , "BreakConstructorInitializersBeforeComma" : true
+  }
+, "C_Cpp.clang_format_sortIncludes"   : null
+, "html.format.wrapLineLength"        : 0
+
+/* Plant UML */
+, "plantuml.commandArgs"              :
+  [
+    "-Xmx2g"
+  , "-DPLANTUML_LIMIT_SIZE=16384"
+  ]
+
+/* code-runner settings */
+, "code-runner.clearPreviousOutput"   : true
+, "code-runner.runInTerminal"         : true
+, "C_Cpp.updateChannel"               : "Insiders"
+, "plantuml.exportFormat"             : "png"
+, "terminal.integrated.shell.windows" : "C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\powershell.exe"
+, "git.autofetch"                         : true
+, "gitlens.gitCommands.skipConfirmations" :
+  [
+    "fetch:command"
+  , "stash-push:command"
+  , "switch:command"
+  , "push:command"
+  ]
+, "plantuml.render"                               : "Local"
+, "plantuml.server"                               : "http://localhost:8080"
+, "editor.suggestSelection"                       : "first"
+, "vsintellicode.modify.editor.suggestSelection"  : "automaticallyOverrodeDefaultValue"
+, "team.showWelcomeMessage"                       : false
+, "[json]"                                        :
+  {
+    "editor.defaultFormatter"             : "vscode.json-language-features"
+  }
+
+/* Draw.io */
+, "hediet.vscode-drawio.online-url"       : "about:blank;https://embed.diagrams.net/"
+, "hediet.vscode-drawio.local-storage"    : "eyIuZHJhd2lvLWNvbmZpZyI6IntcImxhbmd1YWdlXCI6XCJcIixcImN1c3RvbUZvbnRzXCI6W10sXCJsaWJyYXJpZXNcIjpcImdlbmVyYWw7YmFzaWM7YXJyb3dzMjtjbGlwYXJ0O2Zsb3djaGFydDthbmRyb2lkO2Jvb3RzdHJhcDtlcjttb2NrdXBzO3NpdGVtYXA7dW1sO2F6dXJlO25ldHdvcms7b2ZmaWNlO2dtZGw7d2ViaWNvbnNcIixcImN1c3RvbUxpYnJhcmllc1wiOltcIkwuc2NyYXRjaHBhZFwiXSxcInBsdWdpbnNcIjpbXSxcInJlY2VudENvbG9yc1wiOltcIkZGRkZGRlwiLFwiRkYwMDAwXCJdLFwiZm9ybWF0V2lkdGhcIjpcIjI0MFwiLFwiY3JlYXRlVGFyZ2V0XCI6ZmFsc2UsXCJwYWdlRm9ybWF0XCI6e1wieFwiOjAsXCJ5XCI6MCxcIndpZHRoXCI6ODI3LFwiaGVpZ2h0XCI6MTE2OX0sXCJzZWFyY2hcIjp0cnVlLFwic2hvd1N0YXJ0U2NyZWVuXCI6dHJ1ZSxcImdyaWRDb2xvclwiOlwiI2QwZDBkMFwiLFwiZGFya0dyaWRDb2xvclwiOlwiIzZlNmU2ZVwiLFwiYXV0b3NhdmVcIjp0cnVlLFwicmVzaXplSW1hZ2VzXCI6bnVsbCxcIm9wZW5Db3VudGVyXCI6MCxcInZlcnNpb25cIjoxOCxcInVuaXRcIjoxLFwiaXNSdWxlck9uXCI6ZmFsc2UsXCJ1aVwiOlwiXCJ9In0="
+
+/* Code Runner */
+// , "code-runner.executorMap"           :
+//   {
+//     "c"   : "clang -std=c11 -g -Og -pipe -Wall ${fileName} -o ${fileNameWithoutExt}.exe && ${fileNameWithoutExt}.exe"
+//   , "cpp" : "clang++ -std=c++1z -g -Og -pipe -Wall ${fileName} -o ${fileNameWithoutExt}.exe && ${fileNameWithoutExt}.exe"
+//   }
 }
