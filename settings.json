@@ -100,11 +100,21 @@
   , "makerule.common"   : "makefile"
   }
 
+, "emmet.showSuggestionsAsSnippets"             : true
+  
+  // https://github.com/DavidAnson/markdownlint/blob/master/doc/Rules.md  
+, "markdownlint.config"                         :
+  {
+    "no-multiple-blanks"                        : { "maximum" : 2 }
+  }
+
 /* Markdown */
 , "[markdown]"                        :
   {
-    "files.trimTrailingWhitespace"    : false
-  , "editor.defaultFormatter"         : "yzhang.markdown-all-in-one"
+    "files.trimTrailingWhitespace"              : false
+  , "editor.tabSize"                            : 2
+  , "files.eol"                                 : "auto"
+  , "editor.defaultFormatter"                   : "yzhang.markdown-all-in-one"
   }
 
 /* JSON */
@@ -244,6 +254,8 @@
       "name"  : "Vue Green"
     , "value" : "#42b883"
     }
-  ],
-  "testMate.cpp.log.userId": "29f77d6958fbfa3b9f4b39203c5481e1ff3147f0"
+  ]
+
+, "testMate.cpp.log.userId"                     : "29f77d6958fbfa3b9f4b39203c5481e1ff3147f0"
+, "testMate.cpp.log.logSentry"                  : "disable_3"
 }
