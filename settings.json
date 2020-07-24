@@ -18,7 +18,7 @@
 , "editor.letterSpacing"            : -0.5
 , "editor.rulers"                   : [ 80 ]
 , "editor.renderControlCharacters"  : true
-, "editor.matchBrackets"            : true
+, "editor.matchBrackets"            : "always"
 , "editor.links"                    : true
 , "editor.cursorStyle"              : "line"
 , "editor.cursorBlinking"           : "smooth"
@@ -37,19 +37,21 @@
 , "telemetry.enableCrashReporter"         : false
 
 /* Workbench settings */
-, "workbench.iconTheme"                   : "vscode-icons"
+// , "workbench.iconTheme"                   : "vscode-icons"
+, "workbench.iconTheme"                   : "vs-seti"
 , "workbench.editor.showTabs"             : true
 , "workbench.statusBar.visible"           : true
 , "workbench.colorCustomizations"         :
   {
-    "editor.lineHighlightBackground"      : "#135564"
-//  , "editor.lineHighlightBorder"          : "#20c0a8"
-  , "editor.wordHighlightBackground"      : "#135564"
-  , "editor.selectionBackground"          : "#135564"
-  , "editor.selectionHighlightBackground" : "#135564"
-  , "editor.selectionHighlightBorder"     : "#20c0a8"
-  , "editor.findMatchBackground"          : "#fa6800"
-  , "editor.findMatchHighlightBackground" : "#a0522d"
+//     "editor.lineHighlightBackground"      : "#0b2d35"
+// //  , "editor.lineHighlightBorder"          : "#20c0a8"
+// //  , "editor.wordHighlightBackground"      : "#135564"
+//   , "editor.wordHighlightBorder"            : "#a0522d"
+//   , "editor.selectionBackground"          : "#0b2d35"
+//   , "editor.selectionHighlightBackground" : "#0b2d35"
+//   , "editor.selectionHighlightBorder"     : "#20c0a8"
+//   , "editor.findMatchBackground"          : "#fa6800"
+//   , "editor.findMatchHighlightBackground" : "#a0522d"
   }
 
 /* File settings */
@@ -58,11 +60,7 @@
 , "files.insertFinalNewline"        : true
 , "files.trimFinalNewlines"         : true
 , "files.trimTrailingWhitespace"    : true
-, "[markdown]"                      :
-  {
-    "files.trimTrailingWhitespace"  : false
-  }
-, "files.exclude"                         :
+, "files.exclude"                   :
   {
     "**/.git"       : true
   , "**/.svn"       : true
@@ -90,41 +88,65 @@
 , "files.associations"  :
   {
 /* .clang-format */
-    ".clang-format" : "json"
+    ".clang-format"     : "json"
+
 /* Assosiate no-suffix std library header */
-  , "iostream"      : "cpp"
-  , "cstdlib"       : "cpp"
+  , "iostream"          : "cpp"
+  , "cstdlib"           : "cpp"
+
 /* Indivisuals */
-  , "makerule.arm"    : "makefile"
-  , "makerule.sim"    : "makefile"
-  , "makerule.common" : "makefile"
+  , "makerule.arm"      : "makefile"
+  , "makerule.sim"      : "makefile"
+  , "makerule.common"   : "makefile"
   }
-, "[cpp]"                       :
+
+/* Markdown */
+, "[markdown]"                        :
   {
-    "editor.insertSpaces"       : true
-  , "editor.detectIndentation"  : true
+    "files.trimTrailingWhitespace"    : false
+  , "editor.defaultFormatter"         : "yzhang.markdown-all-in-one"
   }
+
+/* JSON */
+, "[json]"                            :
+  {
+    "editor.defaultFormatter"         : "vscode.json-language-features"
+  }
+
+/* C++ */
+, "[cpp]"                             :
+  {
+    "editor.insertSpaces"             : true
+  , "editor.detectIndentation"        : true
+  }
+
 /* C++ settings */
-, "C_Cpp.intelliSenseEngine"          : "Default"
+, "C_Cpp.intelliSenseEngine"                  : "Default"
 
 /* clang-format settings */
 , "C_Cpp.clang_format_path"                   : null
 , "C_Cpp.clang_format_style"                  : "file"
-, "C_Cpp.clang_format_fallbackStyle"          :
-  {
-    "BasedOnStyle"                            : "Chromium"
-  , "IndentWidth"                             : 2
-  , "IndentCaseLabels"                        : false
-  , "AlignAfterOpenBracket"                   : "BAS_Align"
-  , "AlignConsecutiveAssignments"             : true
-  , "AlignConsecutiveDeclarations"            : true
-  , "BreakConstructorInitializersBeforeComma" : true
-  }
-, "C_Cpp.clang_format_sortIncludes"   : null
-, "html.format.wrapLineLength"        : 0
+, "C_Cpp.clang_format_fallbackStyle"          : "Chromium"
+  // {
+  //   "BasedOnStyle"                            : "Chromium"
+  // , "IndentWidth"                             : 2
+  // , "IndentCaseLabels"                        : false
+  // , "AlignAfterOpenBracket"                   : "BAS_Align"
+  // , "AlignConsecutiveAssignments"             : true
+  // , "AlignConsecutiveDeclarations"            : true
+  // , "BreakConstructorInitializersBeforeComma" : true
+  // }
+, "C_Cpp.clang_format_sortIncludes"             : null
+, "C_Cpp.updateChannel"                         : "Insiders"
+
+/* HTML */
+, "html.format.wrapLineLength"                    : 0
 
 /* Plant UML */
-, "plantuml.commandArgs"              :
+, "plantuml.exportFormat"                         : "png"
+, "plantuml.render"                               : "Local"
+, "plantuml.server"                               : "http://localhost:8080"
+, "plantuml.commandArgs"                          :
   [
     "-Xmx2g"
   , "-DPLANTUML_LIMIT_SIZE=16384"
@@ -133,9 +155,17 @@
 /* code-runner settings */
 , "code-runner.clearPreviousOutput"   : true
 , "code-runner.runInTerminal"         : true
-, "C_Cpp.updateChannel"               : "Insiders"
-, "plantuml.exportFormat"             : "png"
+
+
 , "terminal.integrated.shell.windows" : "C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\powershell.exe"
+
+/* Editor */
+, "editor.suggestSelection"                       : "first"
+
+/* VS Intelli Code */
+, "vsintellicode.modify.editor.suggestSelection"  : "automaticallyOverrodeDefaultValue"
+
+/* Git */
 , "git.autofetch"                         : true
 , "gitlens.gitCommands.skipConfirmations" :
   [
@@ -144,15 +174,9 @@
   , "switch:command"
   , "push:command"
   ]
-, "plantuml.render"                               : "Local"
-, "plantuml.server"                               : "http://localhost:8080"
-, "editor.suggestSelection"                       : "first"
-, "vsintellicode.modify.editor.suggestSelection"  : "automaticallyOverrodeDefaultValue"
+
 , "team.showWelcomeMessage"                       : false
-, "[json]"                                        :
-  {
-    "editor.defaultFormatter"             : "vscode.json-language-features"
-  }
+
 
 /* Draw.io */
 , "hediet.vscode-drawio.online-url"       : "about:blank;https://embed.diagrams.net/"
@@ -164,4 +188,62 @@
 //     "c"   : "clang -std=c11 -g -Og -pipe -Wall ${fileName} -o ${fileNameWithoutExt}.exe && ${fileNameWithoutExt}.exe"
 //   , "cpp" : "clang++ -std=c++1z -g -Og -pipe -Wall ${fileName} -o ${fileNameWithoutExt}.exe && ${fileNameWithoutExt}.exe"
 //   }
+
+/*  */
+, "peacock.favoriteColors"  :
+  [
+    {
+      "name"  : "Angular Red"
+    , "value" : "#b52e31"
+    }
+  , {
+      "name"  : "Auth0 Orange"
+    , "value" : "#eb5424"
+    }
+  , {
+      "name"  : "Azure Blue"
+    , "value" : "#007fff"
+    }
+  , {
+      "name"  : "C# Purple"
+    , "value" : "#68217A"
+    }
+  , {
+      "name"  : "Gatsby Purple"
+    , "value" : "#639"
+    }
+  , {
+      "name"  : "Go Cyan"
+    , "value" : "#5dc9e2"
+    }
+  , {
+      "name"  : "Java Blue-Gray"
+    , "value" : "#557c9b"
+    }
+  , {
+      "name"  : "JavaScript Yellow"
+    , "value" : "#f9e64f"
+    }
+  , {
+      "name"  : "Mandalorian Blue"
+    , "value" : "#1857a4"
+    }
+  , {
+      "name"  : "Node Green"
+    , "value" : "#215732"
+    }
+  , {
+      "name"  : "React Blue"
+    , "value" : "#00b3e6"
+    }
+  , {
+      "name"  : "Something Different"
+    , "value" : "#832561"
+    }
+  , {
+      "name"  : "Vue Green"
+    , "value" : "#42b883"
+    }
+  ],
+  "testMate.cpp.log.userId": "29f77d6958fbfa3b9f4b39203c5481e1ff3147f0"
 }
