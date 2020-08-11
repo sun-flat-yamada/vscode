@@ -10,7 +10,7 @@ root = true
 [*]
 indent_style              = space
 indent_size               = 2
-end_of_line               = lf
+end_of_line               = auto
 charset                   = utf-8
 trim_trailing_whitespace  = true
 insert_final_newline      = true
@@ -27,7 +27,7 @@ indent_style = tab
 [*.json]
 indent_style              = space
 indent_size               = 2
-end_of_line               = lf
+end_of_line               = auto
 charset                   = utf-8
 trim_trailing_whitespace  = true
 insert_final_newline      = true
@@ -168,7 +168,7 @@ dotnet_code_quality_unused_parameters                               = all : erro
 ###############################
 [*.cs]
 indent_size                                                         = 2
-end_of_line                                                         = crlf
+end_of_line                                                         = auto
 
 
 # --------------------------------------------------
