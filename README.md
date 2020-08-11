@@ -12,6 +12,13 @@
 [ref-vscode-settings-sync]:https://code.visualstudio.com/docs/editor/settings-sync
 
 
+## Color Theme
+
+You can choice good looking theme as follows:
+
+https://vscodethemes.com/
+
+
 ## Extensions
 
 If you use INSIDER version.
@@ -41,4 +48,3 @@ code --list-extensions | sed -e 's/^/code --install-extension /' > force-install
 # Import
 bash force-install-vscode-extensions.sh
 ```
-
