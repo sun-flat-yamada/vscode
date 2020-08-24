@@ -1,8 +1,9 @@
 # How to code Unit-Testing : Unit Testの実装方法
 
-2020-08-13
+Unit Test@2020
 
-D-EVO3サポート対応において、Unit Testは2020年時点の最新状況を加味して以下の構成を導入した。利用に際しての要点と簡単な実装方法を示す。
+2020年時点の最新状況を加味して以下の構成を選定。
+利用に際しての要点と簡単な実装方法を示す。
 
 Category                | Name
 :---                    |:---
@@ -11,14 +12,6 @@ Mocking Library         | [Hippomocks]
 
 [Catch2]:https://github.com/catchorg/Catch2
 [Hippomocks]:https://github.com/dascandy/hippomocks
-
-
-## 注記
-
-SDKのUnit-Testing Frameworkは混在している。
-
-- 既存のUTはCppUnitが用いられているが長期間メンテナンスされていない。D-EVO3サポート対応において、再利用しない場合はメンテナンス要件外とする方針となった。
-- また、D-EVO3サポート対応で VisualStudio2008 -> 2017 へアップグレードしたことにより、CppUnit側のリコンパイルが必要になったが、構成管理にはビルド済みバイナリしか登録されていなかったため未メンテである。
 
 
 ## サンプルを元にした簡単な説明
